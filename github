@@ -1,0 +1,66 @@
+GITHUB
+
+Install : sudo apt install git -y
+
+Then create account on Github
+My username : GibJaf
+Password    : It is on my mobile
+
+Each account can have multiple repositories
+
+git --version => prints git version installed
+
+Configuration : git config --global user.name "<UserName>"
+                git config --global user.email "<Email_Registered_On_GitHib>"
+                git config --list => lists current config details
+                Same config details in file : ~/.gitconfig
+
+
+
+
+  METHOD 1
+
+Cloning  : git clone <URL of repository>
+
+Now make whatever changes to contents of that repository
+
+git status => prints status , comparing online git repo and changes made to this
+                                downloaded repo.
+
+git add <file_name>
+git commit -m "Comment" <file_name>   <= doesn't mean that it has been pushed onto online repo
+git push -u origin master
+        Then it asks for username and password
+        Type them in the changes will be reflected in online repo
+
+
+
+
+
+  METHOD 2
+
+1) Install hub by cloning it as 'git clone https://github.com/github/hub.git'
+2) Create remote github repository :
+3) hub create <repository_name>
+
+
+
+
+
+
+
+
+Notes:
+1) If file is being deleted , then to stage the deletion
+   do => git rm <file_name>
+   If it is a folder to be deleted then do 
+      => git rm -r <folder_name> . All files in it will
+      will also be removed
+   Then go ahead and commit the change and push it to github.com
+
+2) In order to discard all local commits on this branch, 
+   to make the local branch identical to the "upstream" 
+   of this branch, simply run 
+	=> git reset --hard @{u}
+
+

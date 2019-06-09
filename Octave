@@ -1,0 +1,11 @@
+INSTALLATION
+1) Install from Ubuntu Software Center . Problem => not latest .
+2) To get latest : 
+	i) sudo apt-get install flatpak
+	ii) flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	iii) flatpak install flathub org.octave.Octave
+	iv) Launch using : flatpak run org.octave.Octave
+
+REMOVE 
+1) flatpak uninstall org.octave.Octave
+2) TO uninstall flatpak , if you want : sudo apt-get remove flatpak

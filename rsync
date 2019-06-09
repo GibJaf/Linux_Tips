@@ -1,0 +1,28 @@
+RSYNC
+
+1) rsync Source_Dir/ Dest_Dir/
+	/* copies files from Source_Dir to Dest_Dir */
+
+2) rsync -r Source_Dir/ Dest_Dir/
+	/* copies files and folders from Source_Dir to Dest_Dir */
+
+3) rsync Source_Dir Dest_Dir/
+	/* copies Source_Dir to Dest_Dir */
+
+4) rsync -a -v --dry-run Source_dir/ Dest_Dir/
+	/* -a : includes all file permissions , user groups , etc
+	   -v : verbose
+	   --dry-run : check what changes will occur 
+		without actually making the changes */
+
+5) rsync
+	/* --delete : if Dest_Dir contains file or folders that 
+		not in Source_Dir , this flag deletes extra stuff
+		in Dest_Dir */
+
+6) rsync -zaP username@IP_Address:~/path/ Dest_Path/
+	/* -z : compress
+	   -P : shows progress 
+	   This command gets stuff from remote location .
+	   You can do vice versa as well .
+	   If authentication is not set up , you might have to enter password*/

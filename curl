@@ -1,0 +1,28 @@
+CURL
+It basically returns whatever is rendered by the browser .
+eg : curl http://something.com:port_no will return the html behind it.
+
+1) GET request
+	curl <URL>
+
+
+2) To get header along with content 
+	curl -i <URL>
+	// returns 
+		response code (200 , 404 etc)
+		content-type (html , json etc)
+
+3) POST request
+	curl -d "whatever data to be posted" <URL>
+
+4) PUT request (to replace data)
+	curl -X PUT -d "whatever data to be posted" <URL>
+
+5) DELETE request
+	curl -X DELETE <URL>
+
+6) In case of routes requiring authentication
+	curl -u <username>:<password> <URL>
+
+7) Download response from URL
+	curl -o <file_to_save_response_in> <URL>

@@ -1,0 +1,45 @@
+VIRTUALBOX
+
+1) Problem 1
+
+To be able to add a USB to VirtualBox => sudo adduser USERNAME vboxuser
+Then logout and login for it to  have an effect
+
+After installing VirtualBox fresh , it gives an error on trying to run a guest OS .
+Soln => Install VirtualBox Extension Pack
+---------------------------------------------------------------------------
+
+2) Networking modes
+
+NAT : VM connects to external network through 
+	VirtualBox NAT Engine via Host as proxy
+	For each VM a new NAT network is created .
+	For each VM , no access from outside network
+		    , no network between host and VM
+		    , no network between VMs
+	Can create connection from host to VM on a port 
+	(by port forwarding , which didnt work for some reason) .
+	However ping won't work by port forwarding cuz of some ICMP blah blah.
+
+NAT Network :
+	Other than a network is created between VMs ,
+	everything is same as NAT
+
+Bridged Adapter : Each VM gets an IP like the Host and can be
+		  seen from router settings
+	Access from outside network
+	Network between Host and VM
+	Network between VMs
+	Access to external network/Internet
+
+Internal Network :
+	Network of VMs , but no access outside
+
+Host-Only : 
+	Connection from Host to that specific VM only.
+
+Host-Only : 
+	Access from outside network <= No
+	Network between Host and VM <= Yes
+	Network between VMs	    <= Yes
+	Access to external network/Internet <= No

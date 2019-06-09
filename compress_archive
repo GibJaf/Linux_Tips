@@ -1,0 +1,8 @@
+COMPRESS
+
+Source : https://www.cyberciti.biz/faq/how-to-zip-a-folder-in-ubuntu-linux/
+
+1) zip multiple files and folders into 1 zip file 
+	zip -r <New_zip_file.zip> <folder1> <folder2> <file1>
+	// -r means recursive
+	// -e add a password

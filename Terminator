@@ -1,0 +1,13 @@
+Terminator :
+ Install : apt install terminator
+1) Toggle fulscreen : F11
+2) Split terminals horizontally : Ctrl + Shift + O
+3) Split terminals vertically   : Ctrl + Shift + E
+4) Move to terminal above the current one : Alt + <UpArrow>
+5) Move to terminal below the current one : Alt + <DownArrow>
+6) Move to terminal left of current one   : Alt + <LeftArrow>
+7) Move to terminal right of current one  : Alt + <RightArrow>
+8) Freeze running command                 : Ctrl + s
+9) Resume the command                     : Ctrl + q
+10) Kill running command                  : Ctrl + c
+

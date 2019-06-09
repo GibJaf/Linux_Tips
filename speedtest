@@ -1,0 +1,8 @@
+sudo apt install speedtest-cli
+
+speedtest or speedtest-cli
+
+speedtest --simple or speedtest-cli --simple
+
+
+Project idea : log speedtest results to a database

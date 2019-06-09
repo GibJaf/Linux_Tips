@@ -1,0 +1,18 @@
+Install SSH
+
+1) sudo apt-get install openssh-server
+
+2) Take a copy of the default SSH configuration and rename it as factory default
+        => sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.factory-defaults
+
+3) Modify it's permissions
+        => sudo chmod a-w /etc/ssh/sshd_config.factory-defaults
+
+4) sudo systemctl restart ssh
+
+5) Make a folder => mkdir ~/.ssh
+
+6) Change it's permission : chmod 700 ~/.ssh
+
+7) Connect over LAN : ssh username@ip.address.here
+

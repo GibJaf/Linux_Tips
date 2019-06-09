@@ -1,0 +1,16 @@
+1) QR Code 
+Link : https://www.youtube.com/watch?v=6k_Q-oqzRh4&t=0s&list=WL&index=96
+Install : sudo apt install qrencode
+Command : 
+	qrencode "http://filmsbykris.com" -t png -o image.png
+	qrencode "http://filmsbykris.com" -t UTF8
+	qrencode "http://filmsbykris.com" -t ANSII
+	qrencode "http://filmsbykris.com" -t ANSIIi
+	date | qrencode -t UTF8
+
+
+2) Install .deb file from terminal
+	sudo apt install ./name.deb
+
+3) rename files ( here all .html files converted to .php)
+	rename 's/.html$/.php/' *.html

@@ -1,0 +1,230 @@
+Java 
+	Install : sudo apt install openjdk-8-jdk
+	Compile program : javac <program_name>.java
+	Run program     : java <program_name>
+
+-------------------------------------------------------------
+
+To stop the " System error report " pop-up 
+ Disable Apport this way : 
+   Step 1 : gksu gedit /etc/default/apport
+   Step 2 : Now change the "enabled = 1" to "enabled = 0" .
+	    Save and close the file .
+	Now no more pop-ups
+
+-------------------------------------------------------------
+
+nano shortcuts : 
+1) Save : Ctrl + O
+2) Exit : Ctrl + X
+3) Copy : Alt+Shift+A or Ctrl+6 to set or unset mark.
+	  Use arrow keys to set highlight/select the text to be copied.
+	  Alt+Shift+6 or Alt+6 to copy.
+4) Paste : Ctrl+U
+5) Cut   : Ctrl+K
+6) Show line numbers on left : Alt+Shift+3
+7) Go to first line  : Alt+\
+8) Go to last  line  : Alt+/
+9) Go to line number, column number : Ctrl+_   <=underscore means Shift+(minus symbol)
+10) Search and replace : 
+11)  Help : Ctrl+G
+
+------------------------------------------------------------
+
+To install from a PPA : 
+1) sudo add-apt-repository ppa:name/ppa
+2) sudo apt update
+3) sudo apt install <package_name>
+
+------------------------------------------------------------
+
+Wireshark 
+	To make Wireshark run without root privileges 
+	=> sudo dpkg-reconfigure wireshark-common
+
+-------------------------------------------------------------
+
+Add folder to PATH 
+1) sudo nano /etc/environment
+2) Add the complete path to the folder , to the current value of PATH with a 
+   semicolon before it .
+3) Reboot . W/o reboot it won't have an effect .
+	This is premanant and system wide ie: for all users .
+	
+To remove the folder from PATH
+1) sudo nano /etc/environment
+2) Remove the folder from the value of PATH
+3) Reboot .
+
+
+Make script execute on STARTUP 
+[For Ubuntu]
+At the end of contents of .profile (test if it works for .bashrc) add 
+	bash /path_to_script 
+
+
+Schedule tasks using Crontab
+1) crontab -l
+2) crontab -e //opens crontab file
+3) m h dom mon dow  command    =>  minute hour dayOfMonth DayOfWeek   Command
+4) Enter task in the format as specified in step 3
+5) Save and exit & Viola !
+
+-----------------------------------------------------------------------------
+
+Check integrity of files : 
+   ALGO_NAME    COMMAND		   LENGTH OF HEXADECIMAL CHECKSUM
+1) MD5    : md5sum <filename>      // 32  character ie: 128 bits
+2) SHA256 : sha256sum <filename>   // 64  character ie: 256 bits
+3) SHA512 : sha512sum <filename>   // 128 character ie: 512 bits
+4) SHA1	  : sha1sum <filename>	   // 40  character ie: 160 bits
+
+Additional options :
+1) more than one files : <algo_name> <filename1> <filename2>
+2) To save the checksum in a file : <algo_name> <filename/s> > <NameOfFileContainingCheckSum>
+3) To check from the file : <algo_name> -c <NameOfFileContainingCheckSum>
+	Note : you have to be in the same folder in which the files are , 
+	       are to be verified .
+4) Another way to use : echo -n "Some random string" | <algo_name>
+
+Notes : 
+1) 2 files with same content but diff. names will have same checksum.
+
+---------------------------------------------------------------------------
+VIRTUALBOX 
+
+To be able to add a USB to VirtualBox => sudo adduser USERNAME vboxuser
+Then logout and login for it to  have an effect 
+
+After installing VirtualBox fresh , it gives an error on trying to run a guest OS .
+Soln => Install VirtualBox Extension Pack
+---------------------------------------------------------------------------
+
+
+Add a user
+1) sudo adduser <userName>
+2) usermod -G sudo <username>   <= adds the new user to group sudoers
+3) Then it asks for password , full name , contact no. and stuff.
+
+
+Login as another user from terminal : su - <username>
+Then it asks for password . Enter correct password and Viola 
+
+-----------------------------------------------------------------------------
+
+GPU commands 
+1) inxi -G  // displays all info about all GPUs
+2) lspci    // gives info about all physical ports including GPU
+
+
+-----------------------------------------------------------------------------
+
+MYSQL 
+
+Installation
+1) sudo  apt install mysql-server // installs the default install package
+2) sudo mysql_secure_installation 
+
+For best reference : https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+
+Uninstallation
+1) sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+2) sudo rm -rf /etc/mysql /var/lib/mysql
+3) sudo apt-get autoremove
+4) sudo apt-get autoclean
+
+
+---------------------------------------------------------------------------------------------
+
+Display time dynamically on terminal :
+	watch -n1 "date '+%D%n%T'|figlet -k"
+
+---------------------------------------------------------------------------------------------
+MOUNT USB 
+
+Command to see already mounted devices : mount
+It displays all partitions of all mounted devices .
+For my 4 GB USB , it is /dev/sdb1
+
+To unmount it : umount /dev/sdb1
+Be carefull , which partition you specify .
+
+1)create folder /media/el1t3/usb-drive
+2)mount /dev/sdb1 /media/el1t3/usb-drive
+3)cd /media/el1t3/usb-drive and you can read all the files .
+4) However , to be able to edit them you must be in root . So do : sudo su  
+
+Eject :
+	sudo eject /dev/sdb1
+	[Check man page of eject]
+
+------------------------------------------------------------------------------------
+
+CHANGE ICON OF SOFTWARE
+
+Only tested it on eclipse installation
+Downloaded Eclipse from https://www
+
+After installing 
+
+----------------------------------------------------------------------------------
+
+
+MISCELLENOUS :
+	  <return> key is Ctrl 
+	  <Super> key is the key with Windows icon on it.
+		To the left of Alt and to the right of Fn.
+
+	  Whatever is saved in /tmp folder gets deleted on 
+	  next boot as the name implies "temporary"
+
+	  Another way to execute a file without making it an
+	  executable : . <filename>
+	  example : to reload bash settings => . .bashrc
+
+	  To execute a file in current directory
+	  Method 1 : . <file_name>
+	  Method 2 : <Program_nam>e ./<file_name>
+			eg : If it is a bash script then => bash ./<file_name>
+			     If it is a python script then => python ./<file_name>
+	  Method 3 : ./<file_name>	// Required <file_name> to be an executable
+	  Method 4 : . /FULL/PATH/TO/CURRENT/DIRECTORY/<file_name>
+		From what I understand . means current directory .
+		
+	  To execute a file in parent directory
+	  Method 1 : <Program_name> ../<file_name>
+			eg:  If it is a bash script then => bash ../<file_name>
+			     If it is a python script then => python ../<file_name>
+	  Method 2 : ../<file_name>	//Requires <file_name> to be an executable
+
+
+	  Another way to shutdown now : 
+		systemctl poweroff -i // more powerful . Logs out other users
+		that are logged in and shuts down
+
+
+	reset command clear the screen and literally resets the terminal .
+	Does not delete history and does not launch terminal again cuz it doesn't
+	read .bashrc file
+
+-------------------------------------------------------------------------------
+
+LAUNCH FROM TERMINAL 
+
+1) Mozilla Firefox => firefox &
+2) Transmission    => transmission-gtk &
+3) VLC with a paticular file => 
+	vlc <path to video file> --sub-file <path to srt file> --fullscreen &
+4) .docx using LibreOffice Writer => lowriter <path/to/file>
+
+The & symbol puts the process in background .
+If & is not used , the terminal can't be used after.
+
+----------------------------------------------------------------------
+
+
+29/7/18
+1) Install Etcher
+2) aliases
+3) Encrypt/decrypt files with gpg
+4) Ubuntu icon change of desktop entry

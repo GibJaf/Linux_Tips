@@ -1,0 +1,8 @@
+Tool : gdrive
+Location: ~/Softwares/gdrive-linux-x64
+Online  : https://github.com/prasmussen/gdrive
+Tutorial : https://www.howtoforge.com/tutorial/how-to-access-google-drive-from-linux-gdrive/
+
+Notes:
+1) The File ID and the Dir ID is what you see in left most column when you do => gdrive list
+2) I am accessing it as an alias : gdrive

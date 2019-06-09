@@ -1,0 +1,40 @@
+NETCAT
+
+By default netcat-Openbsd comes installed (without the -e command)
+To install netcat-traditional ( along with keeping the openbsd installed)
+1) sudo apt-get install netcat-traditional
+2) sudo update-alternatives --config nc         <= to select which version to use
+3) enter the number corresponding to the version you want to keep default
+4) Now => nc -h command will show netcat-traditional along with the -e option
+
+Note : nc and netcat are same .
+       ncat is the netcat implemenation by Nmap .
+
+To use netcat
+1) Chat
+        Server : nc -l -p <PortNo>
+        Client : nc <IP_of_Server> <SamePortNo>
+
+2) File transfer
+        Server( sender ) : cat <filename> | nc <IP_of_Client> <PortNo>
+        Client(receiver) : nc -l -p <SamePortNo> > <NewFileName>
+                Herer receiver is always listening , waiting for sender to
+                start sending the file
+
+
+                        or
+
+        Server( sender ) : cat <filename> | nc -l -p <PortNo>
+        Client(receiver) : nc <IP_of_Sender> <SamePortNo>
+                Here sending is ready to transmit . It is waiting for
+                receiver to start receiving .
+
+        Note : Connection does not terminate after sending the file.
+                There is no indication that transfer is over .
+
+3)Command execution (Valid only for netcat-traditional)
+        Server : nc -l -p <PortNo> -e /bin/bash [For Linux]
+                 nc -l -p <PortNo> -e cmd.exe   [For Windows]
+        Client : nc <IP_of_Server> <SamePortNo>
+
+

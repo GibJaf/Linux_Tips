@@ -1,0 +1,9 @@
+Click images from command line
+
+1) Simply click images
+	uvccapture
+	   or
+	uvccapture -m
+  By default image saved as snap.jpg
+
+2) 

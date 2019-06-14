@@ -1,0 +1,7 @@
+To stop the " System error report " pop-up
+ Disable Apport this way :
+   Step 1 : gksu gedit /etc/default/apport
+   Step 2 : Now change the "enabled = 1" to "enabled = 0" .
+            Save and close the file .
+        Now no more pop-ups
+

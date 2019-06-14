@@ -1,0 +1,15 @@
+nano shortcuts :
+1) Save : Ctrl + O
+2) Exit : Ctrl + X
+3) Copy : Alt+Shift+A or Ctrl+6 to set or unset mark.
+          Use arrow keys to set highlight/select the text to be copied.
+          Alt+Shift+6 or Alt+6 to copy.
+4) Paste : Ctrl+U
+5) Cut   : Ctrl+K
+6) Show line numbers on left : Alt+Shift+3
+7) Go to first line  : Alt+\
+8) Go to last  line  : Alt+/
+9) Go to line number, column number : Ctrl+_   <=underscore means Shift+(minus symbol)
+10) Search and replace :
+11)  Help : Ctrl+G
+

@@ -1,0 +1,18 @@
+Check integrity of files :
+   ALGO_NAME    COMMAND            LENGTH OF HEXADECIMAL CHECKSUM
+1) MD5    : md5sum <filename>      // 32  character ie: 128 bits
+2) SHA256 : sha256sum <filename>   // 64  character ie: 256 bits
+3) SHA512 : sha512sum <filename>   // 128 character ie: 512 bits
+4) SHA1   : sha1sum <filename>     // 40  character ie: 160 bits
+
+Additional options :
+1) more than one files : <algo_name> <filename1> <filename2>
+2) To save the checksum in a file : <algo_name> <filename/s> > <NameOfFileContainingCheckSum>
+3) To check from the file : <algo_name> -c <NameOfFileContainingCheckSum>
+        Note : you have to be in the same folder in which the files are ,
+               are to be verified .
+4) Another way to use : echo -n "Some random string" | <algo_name>
+
+Notes :
+1) 2 files with same content but different names will have same checksum.
+

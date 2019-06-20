@@ -1,0 +1,10 @@
+BEEP
+
+Install 
+=> sudo apt install beep 
+
+To enable system beep
+=> sudo modprobe pcspkr
+
+Reason why it does not work by default is because Ubuntu no longer loads the
+hardware driver that produces the beep

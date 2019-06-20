@@ -1,6 +1,19 @@
 VIRTUALBOX
 
-1) Problem 1
+1) Installation on Ubuntu 18.04
+ i) Import Oracle public key to your system signed Debian packages
+=> wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+   wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+
+ ii) Add Oracle VirtualBox PPA to Ubuntu system
+=> sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+
+ iii) Install
+=> sudo apt update
+   sudo apt install virtualbox-6.0
+
+---------------------------------------------------------------------------
+2) Problem 1
 
 To be able to add a USB to VirtualBox => sudo adduser USERNAME vboxuser
 Then logout and login for it to  have an effect
@@ -9,7 +22,7 @@ After installing VirtualBox fresh , it gives an error on trying to run a guest O
 Soln => Install VirtualBox Extension Pack
 ---------------------------------------------------------------------------
 
-2) Networking modes
+3) Networking modes
 
 NAT : VM connects to external network through 
 	VirtualBox NAT Engine via Host as proxy

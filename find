@@ -1,3 +1,3 @@
 FIND
 
-find /path/to/search -name "filename"
+find /path/to/search -name "file or directory name"

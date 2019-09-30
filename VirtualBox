@@ -15,7 +15,7 @@ VIRTUALBOX
 ---------------------------------------------------------------------------
 2) Problem 1
 
-To be able to add a USB to VirtualBox => sudo adduser USERNAME vboxuser
+To be able to add a USB to VirtualBox => sudo adduser $USERNAME vboxusers
 Then logout and login for it to  have an effect
 
 After installing VirtualBox fresh , it gives an error on trying to run a guest OS .

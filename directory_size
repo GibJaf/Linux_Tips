@@ -1,0 +1,2 @@
+1) du -h --man-depth=0 /path/to/directory
+2) du -sh /path/to/directory

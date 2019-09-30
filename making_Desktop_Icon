@@ -1,0 +1,15 @@
+Put folowing content in a file called <ApplicationName.desktop> and put it in /usr/share/applications folder .
+Then source .bashrc .
+
+This is example to create desktop icon for Skype .
+
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/snap/bin/skype
+Name=Skype
+Comment=Skype
+Icon=/snap/skype/23/usr/share/icons/hicolor/256x256/apps/skypeforlinux.png
+

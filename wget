@@ -1,0 +1,3 @@
+Download files :
+1) wget "<url> "
+2) To save the file with some other name : wget -O "<url>"

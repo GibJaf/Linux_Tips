@@ -16,3 +16,6 @@ Install SSH
 
 7) Connect over LAN : ssh username@ip.address.here
 
+
+Enable SSH / SCP without entering password 
+https://linuxize.com/post/how-to-setup-passwordless-ssh-login/

@@ -1,0 +1,2 @@
+1) delete directories => rm -rf /path/to/directory
+2) delete all except a certain file/folder => rm -- !(filename)

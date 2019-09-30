@@ -1,0 +1,3 @@
+To open and view PDFs
+1) evince <file_name.pdf>		//comes pre-installed on Ubuntu18.04
+2) google-chrome <file_name.pdf>	//you have to install google-chrome browser for this

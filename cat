@@ -1,0 +1,1 @@
+1) Pretty CSV => cat PimaIndiansDiabetes.csv | column -n -t -s, | less -S

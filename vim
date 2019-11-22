@@ -8,4 +8,13 @@
 
 3) To undo all changes made in current session 
 	Press Esc to exit INSERT mode .
-	Then type ":e!" followed by Enter key .
+	Then type ":e!" followed by Enter key 
+
+4) Copy paste
+	Select => Press v to enter visual mode . Move curser around to select text.
+	Copy => Then  y to yank (copy) it .
+	Paste => Press p
+
+
+5) Go back to previous location  => Ctrl + O
+   Jump forward to next location => Ctrl + I

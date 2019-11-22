@@ -1,4 +1,9 @@
+
+Create Hotspot 
 nmcli dev wifi hotspot ifname <INTERFACE> ssid <SSID_NAME> password <PASSWORD>
 INTERFACE => eg : wlp2s0 , wlp4s0 etc
 SSID_NAME => name of wifi hotspot
 PASSWORD  => password to access the wifi hotspot
+
+Switch off Hotspot
+sudo rm /etc/NetworkManager/system-connections/Hotspot*

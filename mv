@@ -1,0 +1,2 @@
+1) Move everything except a certain file or folder
+	=> mv !(</path/of/source/File_Or_Folder>) /path/to/destination

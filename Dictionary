@@ -1,0 +1,5 @@
+Install
+sudo apt-get install dict dictd dict-gcide
+
+Use 
+dict <Word_to_search>

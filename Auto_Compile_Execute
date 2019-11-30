@@ -1,0 +1,18 @@
+For C++ 
+Step 1 : Create a file , say exec.sh with content as 
+		g++ <program_name.cpp> -o program_name && ./program_name
+	 Make it executable => chmod 744 exec.sh
+Step 2 : On terminal => find . -name 'program_name.cpp' | entr -c ./exec.sh
+
+Now , as soon as you edit the file program_name.cpp , contents of exec.sh will
+be executed.
+
+For Java
+Replace contents of exec.sh with 
+	javac program_name.java && java program_name
+On terminal => find . -name 'program_name.java' | entr -c ./exec.sh
+
+For Python
+No need of exec.sh
+Simply add "#!/bin/bash" to start of your script.py file and
+find . -name 'script.py' | entr -c python3 script.py

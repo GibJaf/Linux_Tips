@@ -44,16 +44,6 @@ Schedule tasks using Crontab
 5) Save and exit & Viola !
 
 ---------------------------------------------------------------------------
-VIRTUALBOX 
-
-To be able to add a USB to VirtualBox => sudo adduser USERNAME vboxuser
-Then logout and login for it to  have an effect 
-
-After installing VirtualBox fresh , it gives an error on trying to run a guest OS .
-Soln => Install VirtualBox Extension Pack
----------------------------------------------------------------------------
-
-
 Add a user
 1) sudo adduser <userName>
 2) usermod -G sudo <username>   <= adds the new user to group sudoers

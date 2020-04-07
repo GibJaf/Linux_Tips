@@ -1,0 +1,8 @@
+1) List environments
+conda list
+
+2) Activate a certain environment
+conda activate <name_of_environment>
+
+3) Deactivate environment
+conda deactivate

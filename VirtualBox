@@ -11,18 +11,26 @@ VIRTUALBOX
  iii) Install
 => sudo apt update
    sudo apt install virtualbox-6.0
-
 ---------------------------------------------------------------------------
-2) Problem 1
 
+
+
+2) After a fresh installation of VirtualBox, it gives an error on trying to run a guest OS
+Soln => Install VirtualBox Extension Pack
+--------------------------------------------------------------------------
+
+
+
+3) USB in VirtualBox
 To be able to add a USB to VirtualBox => sudo adduser $USERNAME vboxusers
 Then logout and login for it to  have an effect
-
-After installing VirtualBox fresh , it gives an error on trying to run a guest OS .
-Soln => Install VirtualBox Extension Pack
 ---------------------------------------------------------------------------
 
-3) Networking modes
+
+
+
+
+4) Networking modes
 
 NAT : VM connects to external network through 
 	VirtualBox NAT Engine via Host as proxy
@@ -56,3 +64,30 @@ Host-Only :
 	Network between Host and VM <= Yes
 	Network between VMs	    <= Yes
 	Access to external network/Internet <= No
+-------------------------------------------------------------------------
+
+
+
+
+
+5) VirtualMachine not occupying the entire screen on entering Full Screen mode
+Soln => 
+	i)   sudo apt update
+	ii)  sudo apt-get update
+	iii) Restart the machine
+	iv)  sudo apt install build-essential dkms linux-headers-$(uname -r)
+	v)   In the VirtualMachine menu bar click on Devices -> Insert Guest Additions CD Image.
+	   It will open a window . There click on Run. A new terminal window will open and stuff will install automatically.
+	That's it . If it still doesn't occupy full screen , try a restart . That will definitely make it work.
+--------------------------------------------------------------------------
+
+
+6) Enable Bidirectional Clipboard and DragNDrop feature (assuming Ubuntu18.04 as GuestOS)
+Soln => 
+	i) Select the VirtualMachine in the VirtualBox Manager.
+	ii)  Go to Settings -> General -> Advanced
+	iii) In Shared Clipboard select Bidirectional.
+	     Do same for Drag'n'Drop
+	iv)  Open a terminal and type : sudo apt install virtualbox-guest-dkms
+	That's it . 
+--------------------------------------------------------------------------

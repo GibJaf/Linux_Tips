@@ -1,0 +1,4 @@
+To get CPU information:
+
+1) CPU model:
+cat /proc/cpuinfo | grep "model name"  

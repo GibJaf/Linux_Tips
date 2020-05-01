@@ -45,25 +45,32 @@ NAT : VM connects to external network through
 NAT Network :
 	Other than a network is created between VMs ,
 	everything is same as NAT
+	For each VM
+		Access from outside network 	    => No
+		Network between host and VM 	    => No
+		Network between VMs	    	    => Yes
+		Access to external network/Internet => Yes
 
 Bridged Adapter : Each VM gets an IP like the Host and can be
 		  seen from router settings
-	Access from outside network
-	Network between Host and VM
-	Network between VMs
-	Access to external network/Internet
+	Access from outside network	    => Yes
+	Network between Host and VM	    => Yes
+	Network between VMs		    => Yes
+	Access to external network/Internet => Yes
 
 Internal Network :
 	Network of VMs , but no access outside
+	Access from outside network 	    => No
+	Network between Host and Vm 	    => No
+	Network between VMs		    => Yes
+	Access to external network/Internet => No
 
 Host-Only : 
-	Connection from Host to that specific VM only.
-
-Host-Only : 
-	Access from outside network <= No
-	Network between Host and VM <= Yes
-	Network between VMs	    <= Yes
-	Access to external network/Internet <= No
+	Network of Host and VMs but VMs can't be accessed from outside
+	Access from outside network 	    => No
+	Network between Host and VM 	    => Yes
+	Network between VMs	    	    => Yes
+	Access to external network/Internet => No
 -------------------------------------------------------------------------
 
 

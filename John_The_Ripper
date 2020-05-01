@@ -1,0 +1,13 @@
+Installation 
+	Option1 => sudo snap install john
+
+
+
+
+
+
+
+
+Uninstall
+	If installed using snap => sudo snap remove 
+	else 			=> sudo apt-get purge john-the-ripper

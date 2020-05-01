@@ -1,0 +1,13 @@
+Option 1
+Download the .deb file .
+Go to the location where it is downloaded using File manager
+Right click on the .deb file
+
+Option 2
+Install with gdebi
+
+Option 3
+sudo apt install gdebi
+
+Option 4
+sudo dpkg

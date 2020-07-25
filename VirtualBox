@@ -86,6 +86,7 @@ Soln =>
 	v)   In the VirtualMachine menu bar click on Devices -> Insert Guest Additions CD Image.
 	   It will open a window . There click on Run. A new terminal window will open and stuff will install automatically.
 	That's it . If it still doesn't occupy full screen , try a restart . That will definitely make it work.
+This video worked for Kali_VBox_2020.2 => https://www.youtube.com/watch?v=WiYNrx1Grak
 --------------------------------------------------------------------------
 
 

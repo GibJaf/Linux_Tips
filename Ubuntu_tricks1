@@ -1,8 +1,3 @@
-Java 
-	Install : sudo apt install openjdk-8-jdk
-	Compile program : javac <program_name>.java
-	Run program     : java <program_name>
-------------------------------------------------------------
 
 To install from a PPA : 
 1) sudo add-apt-repository ppa:name/ppa

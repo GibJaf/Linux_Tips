@@ -1,0 +1,8 @@
+For the NetSpeed indicator on top right
+1) sudo apt install chrome-gnome-shell
+2) Go to https://extensions.gnome.org/extension/104/netspeed/
+3) Switch it on
+
+
+
+https://ubuntuhandbook.org/index.php/2020/06/download-upload-speed-ubuntu-20-04-panel/

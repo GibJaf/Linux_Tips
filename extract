@@ -6,10 +6,13 @@ Source : https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-co
 
 1) extract and uncompress
         tar xvzf <file_name.tar.gz>
+
 2) only uncompress
-        gunzip  file.gz
+        gunzip file.gz
+
 3) extract and uncompress into different directory
         tar xvzf <file_name.tar.gz> -C <path_to_directory>
+
 4) extract and uncompress a specific file.doc from file_name.tar.gz
         tar xvzf <file_name.tar.gz> file.doc
 
@@ -27,3 +30,9 @@ Source : https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-co
 
 9) Extract from .rar
 	unrar e -r <file.rar>
+
+10) .zip
+	unzip <file.zip> //uncompresses and extracts into current folder
+	unzip -l <file.zip> // lists contents of the .zip file
+	unzip <file.zip> -d <path_of_folder_in_which_to_extract>
+	

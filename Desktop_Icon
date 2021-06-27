@@ -14,3 +14,9 @@ Comment=Skype
 Icon=/snap/skype/23/usr/share/icons/hicolor/256x256/apps/skypeforlinux.png
 
 Just to test something
+
+
+Note :
+For Android Studio you can follow above solution or,
+open Android Studio and from the ToolBar, Tools -> Create Desktop Entry
+It creates the jetbrains-studio.desktop file at .local/share/applications/

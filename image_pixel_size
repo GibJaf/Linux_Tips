@@ -1,3 +1,0 @@
-image can be jpg , png or any other format
-1) identify /path/to/image
-2) identify -format '%w %h' /path/to/image

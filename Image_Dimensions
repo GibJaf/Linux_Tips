@@ -1,0 +1,8 @@
+To print information about the image file such as 
+a) type(JPG, PNG)
+b) width and height in pixels
+c) and some more info I don't understand
+
+image can be jpg , png or any other format
+1) identify /path/to/image
+2) identify -format '%w %h' /path/to/image

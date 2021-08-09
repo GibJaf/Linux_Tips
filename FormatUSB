@@ -1,0 +1,17 @@
+https://askubuntu.com/questions/22381/how-to-format-a-usb-flash-drive
+https://www.youtube.com/watch?v=z6TEh762Vec
+
+1) To show the USB drive among all storage partitions and volumes on your computer use:
+	lsblk
+   You can also use:
+	df
+   It will be listed as something like /dev/sdb1 or /dev/sdb2.
+
+2) Suppose it may be /dev/sdb1. Unmount it with:
+	sudo umount /dev/sdb1
+
+3) To format drive with the FAT32 file system format:
+	sudo mkfs.vfat -F 32 /dev/sdb1
+
+4) To set a file system label for your pen drive in the process:
+	sudo mkfs.vfat -F 32 -n 'name_for_your_pendrive' /dev/sdb1
